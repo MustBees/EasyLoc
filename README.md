@@ -1,12 +1,13 @@
-# EasyLoc v2
+# EasyLoc v3
 
-Version plus simple de la démo EasyLoc.
+Version visuellement renforcée de la démo EasyLoc.
 
 ## Ce qui change
-- Homepage avec seulement 4 modules
-- Suppression du texte de réflexion
-- Module Location structuré selon le workflow métier fourni
-- Pages dédiées : dates, véhicule, données client, paiement, modification, prise en charge, panne
+- Thème orange inspiré easyJet
+- Hover visible sur les boutons
+- Homepage plus premium et plus impactante
+- Cartes avec mouvement et relief
+- Module Location conservé
 
 ## Lancer en local
 ```bash
