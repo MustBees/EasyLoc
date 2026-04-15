@@ -1,5 +1,33 @@
 import Link from "next/link";
-import { HomeCards } from "@/components/home/home-cards";
+import { ModuleCards } from "@/components/ModuleCards";
+
 export default function HomePage() {
-  return <main><section className="hero"><div className="container hero-grid"><div><div className="badge">Démo de plateforme connectée à Odoo</div><h1>Location de voiture, transport et sinistre dans une seule interface</h1><p>Cette première version te donne une base claire pour la démo : une page d’accueil moderne, quatre entrées principales et une architecture prête pour brancher les formulaires, les emails, les pages sécurisées et les données Odoo.</p><div className="hero-actions"><Link className="button button-primary" href="#modules">Voir les modules</Link><Link className="button button-secondary" href="/rent">Commencer par la réservation</Link></div></div><aside className="panel"><h3>Ce que la démo peut déjà montrer</h3><ul><li>Navigation claire entre les 4 parcours</li><li>Positionnement premium et professionnel</li><li>Architecture compatible avec Odoo</li><li>Base prête pour email + lien de check-in</li></ul></aside></div></section><section id="modules" className="container section"><h2>Les 4 parcours principaux</h2><p>Chaque bloc correspond à un workflow métier que nous allons détailler ensemble étape par étape.</p><HomeCards /></section><section className="container section"><h2>Architecture proposée</h2><div className="cards"><article className="card"><h2>Frontend</h2><p>Next.js pour les pages publiques, les formulaires, les liens sécurisés envoyés par email et une démo facilement déployable sur Vercel.</p></article><article className="card"><h2>Backend</h2><p>API routes Next.js pour appeler Odoo, valider les formulaires, créer les réservations et gérer les confirmations.</p></article><article className="card"><h2>ERP / Données</h2><p>Odoo reste la source métier : clients, voitures, disponibilités, dossiers transport et sinistres.</p></article><article className="card"><h2>Emails + Pages privées</h2><p>Après confirmation, un email envoie un lien unique vers une page de check-in, signature ou suivi de dossier.</p></article></div></section><footer className="container footer">Première base de démonstration. La prochaine étape consiste à intégrer le premier vrai workflow métier.</footer></main>;
+  return (
+    <main>
+      <section className="hero">
+        <div className="container">
+          <div className="kicker">EasyLoc</div>
+          <h1>Réservez, gérez et suivez vos services de mobilité.</h1>
+          <p>
+            Une plateforme simple avec 4 modules : location de véhicule, choix de la voiture,
+            demande de transport et gestion de sinistre.
+          </p>
+          <div className="hero-actions">
+            <Link href="/rent" className="button button-primary">
+              Loue une voiture
+            </Link>
+            <Link href="#modules" className="button button-secondary">
+              Voir les modules
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="modules" className="container section">
+        <ModuleCards />
+      </section>
+
+      <footer className="container footer">Version démo EasyLoc.</footer>
+    </main>
+  );
 }

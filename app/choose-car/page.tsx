@@ -1,4 +1,15 @@
-import { ModulePage } from "@/components/home/module-page";
+import { PageShell } from "@/components/PageShell";
+
 export default function ChooseCarPage() {
-  return <ModulePage title="Choisis ta voiture" description="Ce module présentera la flotte, les filtres, les fiches détaillées et la connexion à Odoo pour la disponibilité." nextAction="Définir le catalogue véhicule" nextHref="/" workflow={[{ title:"Lister les véhicules", description:"Lire les produits ou véhicules depuis Odoo." }, { title:"Filtrer", description:"Trier par catégorie, prix, boîte de vitesse, carburant, agence." }, { title:"Afficher la fiche", description:"Photos, conditions, tarif et disponibilité." }, { title:"Réserver", description:"Basculer vers le workflow de réservation." }]} />;
+  return (
+    <PageShell
+      title="Choisis ta voiture"
+      description="Module catalogue véhicule. Cette page pourra ensuite afficher les voitures disponibles, leurs photos, la catégorie et les conditions."
+    >
+      <div className="step">
+        <h3>Catalogue véhicule</h3>
+        <p>Cette page est volontairement simple pour la démo. Elle sera branchée ensuite sur les véhicules disponibles dans Odoo.</p>
+      </div>
+    </PageShell>
+  );
 }
