@@ -1,12 +1,13 @@
-# EasyLoc v5
+# EasyLoc v7
 
-Version avec entrée cinématique sur scroll.
+Version plus luxe, plus fluide et plus cinématique.
 
-## Effets ajoutés
-- Visuel de course plein écran
-- Zoom progressif pendant le scroll
-- Descente naturelle vers les 4 modules
-- Homepage plus immersive
+## Changements
+- Hero vidéo plus premium
+- Overlay typographique plus ciné
+- Header dark glass plus luxe
+- Section modules premium sombre
+- Cartes plus haut de gamme et plus fluides
 
 ## Lancer en local
 ```bash
