@@ -1,16 +1,11 @@
-# EasyLoc v7
+# EasyLoc v8
 
-Version plus luxe, plus fluide et plus cinématique.
+Version avec storytelling au scroll :
+- la vidéo se noircit progressivement
+- premier message centré
+- deuxième message centré
+- apparition ensuite des 4 services
 
-## Changements
-- Hero vidéo plus premium
-- Overlay typographique plus ciné
-- Header dark glass plus luxe
-- Section modules premium sombre
-- Cartes plus haut de gamme et plus fluides
-
-## Lancer en local
-```bash
-npm install
-npm run dev
-```
+## Texte corrigé
+- Avec EasyLoc, la location en toute simplicité.
+- Choisissez, réservez et roulez.
