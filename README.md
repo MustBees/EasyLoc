@@ -1,13 +1,12 @@
-# EasyLoc v3
+# EasyLoc v4
 
-Version visuellement renforcée de la démo EasyLoc.
+Version avec intro cinématique, logo EasyLoc, homepage nettoyée et cartes animées.
 
-## Ce qui change
-- Thème orange inspiré easyJet
-- Hover visible sur les boutons
-- Homepage plus premium et plus impactante
-- Cartes avec mouvement et relief
-- Module Location conservé
+## Contenu
+- Intro de chargement avec animation du logo
+- Homepage recentrée sur les 4 modules
+- Suppression des textes explicatifs marketing non souhaités
+- Design orange / noir / blanc conservé
 
 ## Lancer en local
 ```bash
