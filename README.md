@@ -1,12 +1,12 @@
-# EasyLoc v4
+# EasyLoc v5
 
-Version avec intro cinématique, logo EasyLoc, homepage nettoyée et cartes animées.
+Version avec entrée cinématique sur scroll.
 
-## Contenu
-- Intro de chargement avec animation du logo
-- Homepage recentrée sur les 4 modules
-- Suppression des textes explicatifs marketing non souhaités
-- Design orange / noir / blanc conservé
+## Effets ajoutés
+- Visuel de course plein écran
+- Zoom progressif pendant le scroll
+- Descente naturelle vers les 4 modules
+- Homepage plus immersive
 
 ## Lancer en local
 ```bash
