@@ -1,50 +1,47 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { ModuleCards } from "@/components/ModuleCards";
+import { IntroScreen } from "@/components/IntroScreen";
 
 export default function HomePage() {
+  const [showIntro, setShowIntro] = useState(true);
+  const [revealMain, setRevealMain] = useState(false);
+
+  useEffect(() => {
+    const introTimer = window.setTimeout(() => {
+      setShowIntro(false);
+      window.setTimeout(() => setRevealMain(true), 140);
+    }, 2800);
+
+    return () => window.clearTimeout(introTimer);
+  }, []);
+
   return (
-    <main>
-      <section className="hero">
-        <div className="container hero-grid">
-          <div>
-            <div className="kicker">EasyLoc • mobilité premium</div>
-            <h1>
-              Réservez votre véhicule avec une expérience <span className="hero-highlight">rapide, claire et moderne</span>.
-            </h1>
-            <p>
-              Une plateforme pensée pour aller vite : location, choix du véhicule, transport et gestion de sinistre,
-              dans une interface plus premium et plus rassurante pour le client.
-            </p>
-            <div className="hero-actions">
-              <Link href="/rent" className="button button-primary">
-                Découvrir la location
-              </Link>
-              <Link href="#modules" className="button button-secondary">
-                Voir les 4 modules
-              </Link>
+    <>
+      {showIntro && <IntroScreen />}
+
+      <main className={revealMain || !showIntro ? "main-reveal visible" : "main-reveal"}>
+        <section className="hero hero-home">
+          <div className="container hero-home-inner">
+            <div className="hero-home-panel">
+              <div className="kicker">EasyLoc</div>
+              <h1>Choisissez votre service.</h1>
+              <p>Location, choix du véhicule, transport et gestion de sinistre.</p>
+              <div className="hero-actions">
+                <Link href="#modules" className="button button-primary">
+                  Entrer
+                </Link>
+              </div>
             </div>
           </div>
+        </section>
 
-          <aside className="hero-panel">
-            <h2>Une démo qui fait plus “vrai produit”</h2>
-            <p>
-              Design plus impactant, contraste plus fort, couleurs orange inspirées d’EasyJet et effets au survol pour donner plus de vie aux actions.
-            </p>
-            <ul>
-              <li>4 modules visibles immédiatement</li>
-              <li>Boutons avec effet lumineux au hover</li>
-              <li>Cartes avec relief et mouvement</li>
-              <li>Univers orange, blanc et noir plus premium</li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-
-      <section id="modules" className="container section">
-        <ModuleCards />
-      </section>
-
-      <footer className="container footer">EasyLoc • version démo visuelle</footer>
-    </main>
+        <section id="modules" className="container section">
+          <ModuleCards />
+        </section>
+      </main>
+    </>
   );
 }
